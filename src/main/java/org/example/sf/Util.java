@@ -15,6 +15,8 @@ public class Util {
 
     @SuppressWarnings({"ConstantConditions", "UnnecessaryLocalVariable"})
     public static File getResourceFile(String filename) {
+        if (filename.isEmpty()) throw new IllegalArgumentException("Argument 'filename' can't be empty");
+
         String filePath = Util.class.getClassLoader().getResource(filename).getFile();
         File file = new File(filePath);
         return file;
