@@ -10,7 +10,7 @@ class UtilTest {
     public void testGetResourceFile_absolutePath_success() {
         String dataPath = Util.getResourceFile("data.csv").getAbsolutePath();
 
-        String expected = "C:\\Core\\CsvJsonXml\\out\\production\\resources\\data.csv";
+        String expected = "C:\\Core\\JUnit\\out\\production\\resources\\data.csv";
 
         Assertions.assertEquals(expected, dataPath);
     }
